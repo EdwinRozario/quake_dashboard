@@ -1,7 +1,7 @@
 quake_api = QuakeApiClient.new
 
 SCHEDULER.every '3s' do
-	quake_api.next_kill
+  quake_api.next_kill
   
   send_event('game', { text: quake_api.game })
   send_event('comments', { text: quake_api.comment })
